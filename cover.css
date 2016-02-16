@@ -181,13 +181,15 @@ hr.fancy-line, hr.fancy-line:before {
  */
 
 .cover {
-  padding: 0 20px;
+  padding: 40px 20px;
 }
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
 }
 
+
+h2{font-size: 24px;}
 
 /*
  * Footer
