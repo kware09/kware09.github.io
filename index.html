@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Cover Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.css"/>
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body ng-controller="Controller as vm">
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+
+          <div class="inner cover">
+            <img src="img/logo.png"/>
+            <hr class="fancy-line"></hr>
+            <h2 ng-if="vm.page1" class="slide-in" >Need to conect your sensors?</h2>
+            <h2 ng-if="vm.page2" class="slide-in" >We Can Help</h2>
+            <h2 ng-if="vm.page3" class="slide-in" >Simplified IoT Platform</h2>
+            <hr class="fancy-line"></hr>
+            <div class="slider"><div class="slider-btn" ng-class="{'active':vm.page1}" ng-click="vm.goPage1()"></div><div class="slider-btn" ng-class="{'active':vm.page2}" ng-click="vm.goPage2()"></div><div class="slider-btn" ng-class="{'active':vm.page3}" ng-click="vm.goPage3()"></div></div>
+          </div>
+
+          
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="site-detail" ng-if="vm.page1">
+      Text can be but here for ain points
+    </div>
+     <div class="site-detail" ng-if="vm.page2">
+      Text can be but here for how we reolve
+    </div>
+     <div class="site-detail" ng-if="vm.page3">
+      more ifo on the platform
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+     <script src="bower_components/angular-animate/angular-animate.js"></script>
+     <script src="js/app.js"></script>
+     <script src="js/Controller.js"></script>
+  
+  </body>
+</html>
