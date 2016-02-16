@@ -5,10 +5,10 @@
         .module('app')
         .controller('Controller', Controller);
 
-    Controller.$inject = [];
+    Controller.$inject = ['$interval'];
 
     /* @ngInject */
-    function Controller() {
+    function Controller($interval) {
         var vm = this;
         vm.title = 'Controller';
         vm.goPage1 = goPage1;
@@ -16,7 +16,28 @@
         vm.goPage3 = goPage3;
         activate();
 
+
         ////////////////
+
+        
+
+        function swapview(){
+        	console.log('switch');
+
+        	if(vm.page1){
+        		goPage2();
+        	}
+        	else if(vm.page2){
+        		goPage3();
+
+        	}
+        else if(vm.page3){
+        	goPage1();
+
+        }
+    }
+
+    $interval(swapview, 5000);
 
         function activate() {
 
