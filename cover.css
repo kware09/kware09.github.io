@@ -78,6 +78,7 @@ h2{font-weight: 100;
   border-color: white;
   border-style: solid;
   margin:4px;
+  cursor:pointer;
 }
 
 .active{
